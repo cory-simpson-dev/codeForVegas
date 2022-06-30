@@ -9,7 +9,6 @@
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -18,29 +17,39 @@
 
 		<!-- nav -->
 		<header class="header">
-			<img src="logo#" alt="cfv logo">
+			<figure class="logo">
+				<img src="logo#" alt="cfv logo">
+			</figure>
 			<nav class="nav">
 				<ul>
-					<li><a class="caps" href="#projects">projects</a></li>
-					<li><a class="caps" href="#events">events</a></li>
+					<li><a class="caps" href="#ongoingprojects">projects</a></li>
+					<li><a class="caps" href="#upcomingevent">events</a></li>
 					<li><a class="caps" href="#getinvolved">get involved</a></li>
 				</ul>
-				<a class="caps" href="donate#">donate</a>
+				<div>
+					<a class="caps" href="donate#">donate</a>
+				</div>
 			</nav>
 		</header>
 
 		<!-- landing intro -->
 
 		<div id="intro" class="int">
-			<h1 class="caps">welcome to code for vegas</h1>
+			<h1 class="caps">welcome to </h1>
 			<!-- floated sprites -->
-			<img src="cfveventimages#" alt="sprited image of cfv">
+			<figure>
+				<img src="cfveventimages#" alt="sprited image of cfv">
+			</figure>
+			<div>
+				<span class="caps">code <br> for <br> vegas </span>
+			</div>
+			
 		</div>
 
 		<!-- our values -->
 
 		<section id="ourvalues" class="our-values">
-			<h3 class="tertiary-title"></h3>
+			<h3>Our Values</h3>
 			<div class="values-container">
 				<div>
 					<!-- font-awesome for icons instead of images -->
@@ -82,10 +91,12 @@
 
 				</div>
 			</div>
-			<div>
+			<div class="event-socials">
 				<span>Come Join Us!</span>
-				<a href="meetup#">Meetup</a>
-				<a href="eventbrite#">Eventbrite</a>
+				<div>
+					<a class="margin-right" href="meetup#">Meetup</a>
+					<a href="eventbrite#">Eventbrite</a>
+				</div>
 			</div>
 		</section>
 
@@ -98,22 +109,30 @@
 			</div>
 			<ul>
 				<li>
-					<img src="sponsorlogo#" alt="sponsor logo">
+					<figure>
+						<img src="sponsorlogo#" alt="sponsor logo">
+					</figure>
 					<span>Name</span>
 					<span class="purple">Company Name</span>
 				</li>
 				<li>
-					<img src="sponsorlogo#" alt="sponsor logo">
+					<figure>
+						<img src="sponsorlogo#" alt="sponsor logo">
+					</figure>
 					<span>Name</span>
 					<span class="purple">Company Name</span>
 				</li>
 				<li>
-					<img src="sponsorlogo#" alt="sponsor logo">
+					<figure>
+						<img src="sponsorlogo#" alt="sponsor logo">
+					</figure>
 					<span>Name</span>
 					<span class="purple">Company Name</span>
 				</li>
 				<li>
-					<img src="sponsorlogo#" alt="sponsor logo">
+					<figure>
+						<img src="sponsorlogo#" alt="sponsor logo">
+					</figure>
 					<span>Name</span>
 					<span class="purple">Company Name</span>
 				</li>
@@ -124,36 +143,47 @@
 
 		<section id="ongoingprojects" class="ongoing-projects">
 			<span class="purple">Ongoing Projects</span>
-			<div id="project-one">
+			<div class="project" id="project-one">
+				<span id="left"> left </span>
 				<div class="project-left">
 					<h5 class="project-title">Project Title</h5>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi maxime aspernatur quasi aperiam sapiente error perferendis magnam nostrum sunt ut quo cum, repellendus voluptates illum fuga sed illo voluptate ad.</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nesciunt amet suscipit! Officia excepturi reiciendis praesentium, nesciunt dolorem quidem vel consequuntur sequi autem voluptatum dolore maiores libero voluptatem adipisci unde tempore amet earum rerum. Sequi ullam dolores suscipit atque quae!</p>
 				</div>
 				<figure>
 					<img src="projectimage#" alt="project image">
 				</figure>
+				<span id="right"> right </span>
 			</div>
-			<!-- include project indicator OR left/right direction arrows revealed on hover to cycle through on click -->
 		</section>
 
 		<!-- consider completed projects section that can be toggled to/from on top of ongoing projects -->
 
 		<!-- footer -->
 
-		<section id="footer" class="footer">
-			<div>
+		<footer id="footer" class="footer">
+			<div class="right-border">
 				<span class="footer-title">Code For Vegas</span>
+				<span>&#169; 2022</span>
+				<span>Designed with CSS & JavaScript</span>
+				<span>Last Updated 06.30.2022</span>
 			</div>
 			<div>
+				<!-- include assets (font-awesome) -->
 				<span class="footer-title">Contact</span>
+				<span>Las Vegas, Nevada 89148</span>
+				<span>+1 (702) 123 - 4567</span>
+				<span>codeforvegas@vegas.com</span>
 			</div>
 			<div>
 				<span class="footer-title">About</span>
+				<a href="#ongoing-projects">Our Projects</a>
+				<a href="#upcoming-event">Vegas Hackathon 2022</a>
+				<a href="#">Become A Partner</a>
 			</div>
 			<div>
 				<span class="footer-title">Follow us on Social Media</span>
 			</div>
-		</section>
+		</footer>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

@@ -16,9 +16,10 @@ html {
 }
 
 body {
-     max-width: 120rem;
+     min-width: 100rem;
+     max-width: 100rem;
      display: grid;
-     grid-template-rows: 4rem 80rem 40rem 140rem 40rem 40rem 20rem;
+     grid-template-rows: 6rem 60rem 40rem 140rem 40rem 40rem 20rem;
      grid-template-areas: 
           "hd"
           "intro"
@@ -27,12 +28,33 @@ body {
           "sponsor"
           "op"
           "footer";
+     row-gap: 4rem;
+}
+
+a {
+     color: #fff;
+     text-decoration: none;
+}
+
+p {
+     font-size: 1.6rem;
+     line-height: 2.4rem;
+}
+
+.caps {
+     text-transform: uppercase;
+}
+
+.purple {
+     color: rgb(117, 115, 230);
 }
 
 /* grid areas */
 
 .header {
      grid-area: hd;
+     display: grid;
+     grid-template-columns: 10rem 1fr;
 }
 
 .int {
@@ -41,6 +63,8 @@ body {
 
 .our-values{
      grid-area: ov;
+     display: grid;
+     grid-template-rows: 10rem 1fr;
 }
 
 .upcoming-events{
@@ -57,4 +81,258 @@ body {
 
 .footer{
      grid-area: footer;
+}
+
+/* header design */
+
+.header {
+     margin-top: 2rem;
+}
+
+.logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.nav {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+
+.nav ul {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+
+.nav a {
+     font-size: 1.6rem;
+}
+
+.nav > div {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding-right: 3rem;
+}
+
+/* intro design */
+
+.int h1,
+.int span {
+     font-size: 14rem;
+     font-weight: 700;
+}
+
+.int figure {
+     float: right;
+}
+
+/* our values design */
+
+.our-values h3 {
+     display: flex;
+     font-size: 3.6rem;
+     justify-content: center;
+     align-items: center;
+}
+
+.values-container {
+     display: flex;
+     justify-content: space-around;
+     border-radius: 1rem;
+     border:rgb(117, 115, 230) 2px solid;
+}
+
+.values-container > div {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     padding: 2rem 4rem;
+}
+
+.values-container h5 {
+     font-size: 3rem;
+}
+
+.values-container p {
+     text-align: center;
+}
+
+/* upcoming event design */
+
+.upcoming-events {
+     display: grid;
+     grid-template-rows: 14rem 1fr 14rem;
+     position: relative;
+}
+
+.events-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.events-container h5 {
+     font-size: 2rem;
+}
+
+.events-container h3 {
+     font-size: 3.6rem;
+     padding: 1.6rem 0;
+}
+
+#timeline {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+}
+
+/* needs more thorough cross-device compatibility */
+
+.upcoming-events::after {
+     position: absolute;
+     content: "HACKATHON";
+     transform: rotate(90deg);
+     -webkit-transform: rotate(90deg);
+     color:rgb(117, 115, 230);
+     opacity: 20%;
+     z-index: -1;
+     top: 42%;
+     right: -60rem;
+     font-size: 22rem;
+}
+
+.event-socials {
+     display: grid;
+     grid-template-rows: repeat(2, 1fr);
+     font-size: 2.4rem;
+}
+
+.event-socials span,
+.event-socials div {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+
+.event-socials a {
+     border: .3rem solid #fff;
+     border-radius: .5rem;
+     padding: 1rem;
+}
+
+.margin-right {
+     margin-right: 2rem;
+}
+
+/* sponsors design */
+
+.sponsors {
+     display: grid;
+     grid-template-rows: 14rem 1fr;
+}
+
+.sponsors h3 {
+     font-size: 3.6rem;
+     font-weight: 700;
+}
+
+.sponsors-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.sponsors ul {
+     display: flex;
+     justify-content: space-around;
+     border-radius: 1rem;
+     border:rgb(117, 115, 230) 2px solid;
+}
+
+.sponsors li {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     padding: 2rem 4rem;
+}
+
+/* ongoing projects */
+
+.ongoing-projects {
+     display: grid;
+     grid-template-rows: 6rem 1fr;
+     background: #fff;
+     border-radius: 1rem;
+}
+
+.ongoing-projects > span {
+     font-size: 2rem;
+     display: flex;
+     align-self: center;
+     margin-left: 4rem;
+}
+
+.project-title {
+     font-size: 3.6rem;
+     font-weight: 700;
+     margin-bottom: 2rem;
+}
+
+.project-left,
+.project > span {
+     color: #000;
+}
+
+#left,
+#right {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+/* add on extra columns for clicking left/right */
+
+.project {
+     display: grid;
+     grid-template-columns: 4rem repeat(2, 1fr) 4rem;
+}
+
+.project > div,
+.project > figure {
+     padding: 4rem;
+}
+
+/* footer design */
+
+.footer {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     background: rgb(12, 7, 24);
+     padding: 3rem;
+}
+
+.footer-title {
+     font-size: 1.2rem;
+     font-weight: 700;
+}
+
+.footer > div {
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.footer > div > * {
+     margin-bottom: 1rem;
+}
+
+.right-border {
+     border-right: 1px solid #fff;
 }
