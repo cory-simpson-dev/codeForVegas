@@ -1,9 +1,14 @@
-As of 2022-04-13:
+# CodeForVegas
 
-    - Began work on codeforvegas landing page (following general layout of codeforamerica.org)
-        - Incomplete:
-            - font-families, font-weights, font-sizing
-            - color scheme
-            - assets (social media thumbnails in footer & general media)
+CodeForVegas is a non-profit located in (believe it or not) Las Vegas, NV. With a bit of inspiration from the co-founder, I've decided to spend a bit of my free time helping as a full-stack web developer.
 
-Note - I will be unavailable to spend a serious amount of time on this landing page & additional applicable pages until the 2nd week of may to continue work on this project!
+## Plans
+
+As of June 29th, 2022, I intend to build out the CodeForVegas.org landing page using HTML, CSS & JS. More functionality (i.e. integrated calendar with all CodeForVegas events) will be research and added in the future. 
+*This section is expected to be changed as new plans arise*
+
+## Changelog
+
+06/29/2022
+
+- Initial rebuild

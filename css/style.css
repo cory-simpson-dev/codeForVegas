@@ -1,20 +1,6 @@
-/* Box Model Hack */
+/* Box Model */
 * {
      box-sizing: border-box;
-}
-
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-	clear: both;
 }
 
 /******************************************
@@ -23,249 +9,52 @@
 
 html {
      font-size: 10px;
-}
-
-a {
-     text-decoration: none;
-}
-
-a:hover {
-     color: rgb(235, 235, 235);
-     text-decoration: underline;
-}
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-
-/* Border for constructing layout */
-body > * {
-     border: 2px solid black;
+     background: #000;
+     color: #fff;
+     display: flex;
+     justify-content: center;
 }
 
 body {
-     display: flex;
-     flex-direction: column;
-     max-width: 1250px;
-     margin-left: auto;
-     margin-right: auto;
+     max-width: 120rem;
+     display: grid;
+     grid-template-rows: 4rem 80rem 40rem 140rem 40rem 40rem 20rem;
+     grid-template-areas: 
+          "hd"
+          "intro"
+          "ov"
+          "ue"
+          "sponsor"
+          "op"
+          "footer";
 }
 
-/* Flex row layout */
+/* grid areas */
 
-section#banner,
-header,
-nav#navTop,
-nav#navTop ul,
-main,
-body > section,
-section.newsContainer,
-section.news > section,
-section.current > section  {
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: space-evenly;
+.header {
+     grid-area: hd;
 }
 
-/* Flex column layout */
-
-div.learn,
-section.news,
-div.news,
-section.current,
-footer > div,
-section#hotEvent,
-div.news > section,
-div.learnTop,
-div.details,
-section.current,
-div.current,
-div.links {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-evenly;
+.int {
+     grid-area: intro;
 }
 
-/* Flex layout corrections */
-
-section.newsContainer,
-section.currentContainer {
-     justify-content: space-between;
+.our-values{
+     grid-area: ov;
 }
 
-div.news > section {
-     align-items: flex-start;
-     justify-content: space-between;
+.upcoming-events{
+     grid-area: ue;
 }
 
-div.learnTop,
-div.current {
-     align-items: flex-start;
-     justify-content: flex-start;
+.sponsors {
+     grid-area: sponsor;
 }
 
-div.details {
-     align-items: flex-start;
-     justify-content: flex-end;
+.ongoing-projects{
+     grid-area: op;
 }
 
-footer {
-     display: flex;
-     flex-direction: row;
-     justify-content: flex-end;
-     align-items: center;
-}
-
-
-/* Layout sizing */
-
-section#hotEvent {
-     height: 26rem;
-}
-
-section#banner {
-     height: 5rem;
-
-}
-
-header {
-     height: 10rem;
-}
-
-header ul{
-     height: 5rem;
-     width: 40rem;
-}
-main {
-     height: 34rem;
-}
-
-main > div {
-     width: 58rem;
-}
-
-main > img {
-     width: 37rem
-}
-
-section#motto {
-     height: 30rem;
-}
-
-section.learn {
-     height: 25rem;
-}
-
-div.learn {
-     width: 36rem;
-     height: 18rem;
-}
-
-div.learnTop {
-     height: 10rem;
-}
-section.news {
-     height: 82rem;
-}
-
-section.newsContainer {
-     height: 47rem;
-     width: 100%;
-}
-
-div.news,
-div.current {
-     width: 36rem;
-}
-
-div.news img,
-div.current img {
-     width: 36rem;
-     height: 20rem;
-}
-
-div.news section {
-     height: 27rem;
-}
-
-section.current {
-     height: 72rem;
-}
-
-section.currentContainer {
-     height: 40rem;
-     width: 100%;
-}
-
-footer {
-     height: 18rem;
-}
-
-div.links {
-     height: 100%;
-}
-
-/******************************************
-/* FONT SIZES && WEIGHTS
-/*******************************************/
-
-main h1 {
-     font-size: 4.8rem;
-}
-
-h5 {
-     font-size: 2.5rem;
-}
-
-section#hotEvent,
-#motto h2,
-main p,
-div.learn span,
-p.title,
-.redUnderscore,
-div.current p,
-a.mail,
-a.redBox {
-     font-size: 2rem;
-}
-
-section#hotEvent > p,
-section#hotEvent > a,
-section#banner,
-header li,
-div.learn a,
-h6,
-span.category,
-span.author,
-span.date {
-     font-size: 1.6rem;
-}
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
-
-/* Red anchors */
-.redBox {
-     background: rgb(180, 0, 0);
-     color: #fff;
-     padding: .5em 1em;
-}
-
-div.links a.redBox {
-     width: 100%;
-     text-align: center;
-}
-
-/* Red underscore */
-.redUnderscore {
-     border-bottom: .4rem solid rgb(180, 0, 0);
-}
-
-/* Mailing list box */
-.mail {
-     border: 1px solid #ddd;
-     padding: .5em 1em;
+.footer{
+     grid-area: footer;
 }
